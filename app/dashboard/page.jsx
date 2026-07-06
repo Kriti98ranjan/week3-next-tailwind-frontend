@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
 import AreaChart from "@/app/components/ui/AreaChart";
 import BarChart from "@/app/components/ui/BarChart";
 import Sidebar from "@/app/components/ui/Sidebar";
@@ -10,7 +9,6 @@ import Badge from "@/app/components/ui/Badge";
 import Button from "@/app/components/ui/Button";
 import Modal from "@/app/components/ui/Modal";
 import Input from "@/app/components/ui/Input";
-import { process } from "node:process";
 
 
 export default function DashboardPage() {
@@ -18,15 +16,10 @@ export default function DashboardPage() {
 
  return (
   <div className="flex min-h-screen bg-gray-100">
-    {/* Sidebar */}
     <Sidebar />
-
-    {/* Right Section */}
     <div className="flex-1 flex flex-col">
-      {/* Navbar */}
       <Navbar />
 
-      {/* Dashboard Content */}
       <main className="p-6 space-y-6 overflow-auto">
         {/* Page title */}
         <h1 className="text-xl sm:text-2xl font-bold text-gray-800">
