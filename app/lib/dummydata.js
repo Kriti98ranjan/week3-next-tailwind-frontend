@@ -82,7 +82,7 @@ export const dummy = [
   },
 ];
 
-// Profile page ke liye ek mock logged-in user
+// login user for profile
 export const mockProfile = {
   name: "Abhinav Raj",
   jobTitle: "Actor",
