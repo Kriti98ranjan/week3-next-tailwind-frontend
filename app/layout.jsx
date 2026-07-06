@@ -1,15 +1,13 @@
-import "./globals.css"
+import "./globals.css";
 
-export const metadata ={
-  title : "Dashboard APP | Profile Page"
-}
+export const metadata = {
+  title: "Dashboard APP",
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
-  )
+  );
 }

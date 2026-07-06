@@ -1,17 +1,16 @@
 import Link from "next/link";
 
-// DAY 4 — page-specific SEO. Root layout ke `template: "%s | Dashboard App"`
-// ki wajah se final title banega: "Home | Dashboard App"
 export const metadata = {
   title: "Home",
-  description: "Welcome to Dashboard App — built with Next.js and Tailwind CSS.",
+  description:
+    "Welcome to Dashboard App — built with Next.js and Tailwind CSS.",
 };
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-300">
-      {/* Simple top navbar */}
-      {/* DAY 4: mobile pe px-4 (tight), sm: se upar px-8 */}
+      {/*navbar */}
+
       <nav className="bg-purple-50 border-b px-4 sm:px-8 py-4 flex justify-between items-center">
         <span className="font-bold text-gray-800 text-sm sm:text-base">
           Dashboard App
@@ -33,17 +32,14 @@ export default function HomePage() {
       </nav>
 
       {/* Hero */}
-      {/* DAY 4: vertical padding mobile pe kam, bade screen pe zyada */}
+
       <div className="flex flex-col items-center justify-center py-16 sm:py-32 text-center px-4">
-        {/* Typography scale: mobile -> tablet -> desktop */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Welcome to the Dashboard App
         </h1>
         <p className="text-fuchsia-500 mb-8 max-w-md text-base sm:text-lg md:text-xl font-bold">
           TailwindCSS + UI System Basics
         </p>
-
-        {/* Mobile pe buttons full-width stacked, sm se upar side-by-side */}
         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
           <Link
             href="/dashboard"
