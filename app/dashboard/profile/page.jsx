@@ -7,7 +7,7 @@ export default function ProfilePage() {
   const user = mockProfile;
 
   return (
-    <div className="space-y-4">
+    <div>
       <Link href="/dashboard" className="text-blue-600 text-sm hover:underline">
         ← Go back
       </Link>
@@ -24,7 +24,7 @@ export default function ProfilePage() {
           </div>
 
           {/* Basic info */}
-          <div className="space-y-4">
+          <div>
             <div>
               <p className="text-xs text-gray-400">Name</p>
               <p className="font-semibold">{user.name}</p>
@@ -40,7 +40,7 @@ export default function ProfilePage() {
           </div>
 
           {/* Social links */}
-          <div className="space-y-4">
+          <div>
             <div>
               <p className="text-xs text-gray-400">LinkedIn</p>
               <p className="text-blue-600">{user.linkedin}</p>
