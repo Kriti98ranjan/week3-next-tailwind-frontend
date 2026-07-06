@@ -1,6 +1,5 @@
-// app/lib/dummydata.js
 
-export const mockUsers = [
+export const dummy = [
   {
     id: 1,
     name: "Manish",

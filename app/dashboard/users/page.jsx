@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { mockUsers } from "@/app/lib/dummydata";
+import { dummy } from "@/app/lib/dummydata";
 import Card from "@/app/components/ui/Card";
 import Badge from "@/app/components/ui/Badge";
 
@@ -11,33 +11,28 @@ export default function UsersPage() {
 
   const perPage = 10;
 
-  // Search input ko lowercase me convert kar diya
   const searchText = search.toLowerCase();
 
-  // Name ya email ke basis par users filter honge
-  const filteredUsers = mockUsers.filter((user) => {
+  const filteredUsers = dummy.filter((user) => {
     return (
       user.name.toLowerCase().includes(searchText) ||
       user.email.toLowerCase().includes(searchText)
     );
   });
 
-  // Total pages calculate
+  // calculate total page
   const totalPages = Math.ceil(filteredUsers.length / perPage);
 
-  // Current page ke users nikalne ke liye
   const start = (page - 1) * perPage;
   const end = start + perPage;
 
   const currentUsers = filteredUsers.slice(start, end);
 
-  // Search change handle
   const handleSearch = (e) => {
     setSearch(e.target.value);
     setPage(1);
   };
 
-  // Pagination ke liye page numbers
   const pages = [];
 
   for (let i = 1; i <= totalPages; i++) {
@@ -53,7 +48,9 @@ export default function UsersPage() {
       </h1>
 
       <Card className="bg-white text-black">
+
         {/* Search */}
+
         <div className="flex justify-end mb-4">
           <input
             type="text"
@@ -65,6 +62,7 @@ export default function UsersPage() {
         </div>
 
         {/* Table */}
+
         <div className="overflow-x-auto">
           <table className="w-full text-sm text-left min-w-160">
             <thead>
@@ -130,6 +128,7 @@ export default function UsersPage() {
         </div>
 
         {/* Pagination */}
+        
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3 mt-4 text-sm text-gray-500">
           <span>
             Showing {filteredUsers.length === 0 ? 0 : start + 1} to{" "}
