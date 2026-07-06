@@ -17,12 +17,6 @@ export default function HomePage() {
         </span>
         <div className="flex gap-2 sm:gap-4">
           <Link
-            href="/about"
-            className="text-xs sm:text-sm hover:bg-blue-700 bg-amber-200 rounded px-3 sm:px-4 py-1.5"
-          >
-            About
-          </Link>
-          <Link
             href="/dashboard"
             className="text-xs sm:text-sm bg-blue-600 text-white px-3 sm:px-4 py-1.5 rounded hover:bg-blue-700"
           >
@@ -48,10 +42,10 @@ export default function HomePage() {
             Open Dashboard
           </Link>
           <Link
-            href="/about"
-            className="border border-gray-300 px-6 py-2.5 rounded-lg hover:bg-amber-200 text-center"
+            href="/login"
+            className="bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-amber-300 text-center"
           >
-            About
+            Login
           </Link>
         </div>
       </div>
