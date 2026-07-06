@@ -16,99 +16,132 @@ import { process } from "node:process";
 export default function DashboardPage() {
   const [modalOpen, setModalOpen] = useState(false);
 
-  return (
-    <div className="space-y-4 sm:space-y-6 px-1 sm:px-0">
-      {/* Page title */}
-      <h1 className="text-xl sm:text-2xl font-bold text-gray-800">Dashboard</h1>
+ return (
+  <div className="flex min-h-screen bg-gray-100">
+    {/* Sidebar */}
+    <Sidebar />
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 px-0 sm:px-2">
-        <Card title="Primary Card" className="bg-blue-600">
-          <p className="text-sm sm:text-base">View Details -</p>
-        </Card>
+    {/* Right Section */}
+    <div className="flex-1 flex flex-col">
+      {/* Navbar */}
+      <Navbar />
 
-        <Card title="Warning Card" className="bg-yellow-500">
-          <p className="text-sm sm:text-base">View Details -</p>
-        </Card>
+      {/* Dashboard Content */}
+      <main className="p-6 space-y-6 overflow-auto">
+        {/* Page title */}
+        <h1 className="text-xl sm:text-2xl font-bold text-gray-800">
+          Dashboard
+        </h1>
 
-        <Card title="Success Card" className="bg-green-600">
-          <p className="text-sm sm:text-base ">View Details -</p>
-        </Card>
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          <Card title="Primary Card" className="bg-blue-600">
+            <p>View Details -</p>
+          </Card>
 
-        <Card title="Danger Card" className="bg-red-600">
-          <p className="text-sm sm:text-base">View Details -</p>
-        </Card>
-      </div>
+          <Card title="Warning Card" className="bg-yellow-500">
+            <p>View Details -</p>
+          </Card>
 
-      {/* Charts */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
-        <Card title="Area Chart Example" className="bg-white text-black overflow-x-auto">
-          <div className="min-w-70">
+          <Card title="Success Card" className="bg-green-600">
+            <p>View Details -</p>
+          </Card>
+
+          <Card title="Danger Card" className="bg-red-600">
+            <p>View Details -</p>
+          </Card>
+        </div>
+
+        {/* Charts */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <Card
+            title="Area Chart Example"
+            className="bg-white text-black"
+          >
             <AreaChart />
-          </div>
-        </Card>
+          </Card>
 
-        <Card title="Bar Chart Example" className="bg-white text-black overflow-x-auto">
-          <div className="min-w-70">
+          <Card
+            title="Bar Chart Example"
+            className="bg-white text-black"
+          >
             <BarChart />
-          </div>
-        </Card>
-      </div>
+          </Card>
+        </div>
 
-      {/* Badges + Buttons*/}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-        <Card header="Status Badges">
-          <div className="flex flex-wrap gap-2">
-            <Badge label="Active" className="bg-green-600" dot />
-            <Badge label="Pending" className="bg-yellow-500" dot />
-            <Badge label="Failed" className="bg-red-600" dot />
-            <Badge label="Admin" className="bg-blue-600" />
-          </div>
-        </Card>
+        {/* Badges + Buttons */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Card header="Status Badges">
+            <div className="flex flex-wrap gap-2">
+              <Badge label="Active" className="bg-green-600" dot />
+              <Badge label="Pending" className="bg-yellow-500" dot />
+              <Badge label="Failed" className="bg-red-600" dot />
+              <Badge label="Admin" className="bg-blue-600" />
+            </div>
+          </Card>
 
-        <Card header="Actions">
-          <div className="flex flex-wrap gap-2 sm:gap-3">
-            <Button
-              className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto"
-              onClick={() => setModalOpen(true)}
-            >
-              Open Modal
-            </Button>
+          <Card header="Actions">
+            <div className="flex flex-wrap gap-2">
+              <Button
+                className="bg-blue-600"
+                onClick={() => setModalOpen(true)}
+              >
+                Open Modal
+              </Button>
 
-            <Button className="bg-green-600 hover:bg-green-700 w-full sm:w-auto">
-              Approve
-            </Button>
+              <Button className="bg-green-600">
+                Approve
+              </Button>
 
-            <Button className="bg-red-600 hover:bg-red-700 w-full sm:w-auto">
-              Delete
-            </Button>
+              <Button className="bg-red-600">
+                Delete
+              </Button>
 
-            <Button className="bg-gray-400 text-white hover:bg-gray-700 w-full sm:w-auto">
-              Cancel
-            </Button>
-          </div>
-        </Card>
-      </div>
+              <Button className="bg-gray-500">
+                Cancel
+              </Button>
+            </div>
+          </Card>
+        </div>
 
-      {/* Modal */}
-      <Modal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-        title="Add New Item"
-        footer={
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
-            <Button variant="outline" onClick={() => setModalOpen(false)} className="w-full sm:w-auto">
-              Cancel
-            </Button>
-            <Button variant="primary" onClick={() => setModalOpen(false)} className="w-full sm:w-auto">
-              Save
-            </Button>
-          </div>
-        }
-      >
-        <Input label="Name" placeholder="Enter name..." className="mb-4 text-black" />
-        <Input label="Email" type="email" placeholder="email@example.com" className="text-black" />
-      </Modal>
+        {/* Modal */}
+        <Modal
+          isOpen={modalOpen}
+          onClose={() => setModalOpen(false)}
+          title="Add New Item"
+          footer={
+            <div className="flex gap-2">
+              <Button
+                variant="outline"
+                onClick={() => setModalOpen(false)}
+              >
+                Cancel
+              </Button>
+
+              <Button
+                variant="primary"
+                onClick={() => setModalOpen(false)}
+              >
+                Save
+              </Button>
+            </div>
+          }
+        >
+          <Input
+            label="Name"
+            placeholder="Enter name..."
+            className="mb-4 text-black"
+          />
+
+          <Input
+            label="Email"
+            type="email"
+            placeholder="email@example.com"
+            className="text-black"
+          />
+        </Modal>
+      </main>
     </div>
-  );
+  </div>
+);
 }
