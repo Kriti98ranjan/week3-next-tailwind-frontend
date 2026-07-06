@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Capstone Mini Project
 
-## Getting Started
+A fully responsive multi-page admin dashboard UI built with Next.js 14 (App Router) and Tailwind CSS — no backend, all data is dummy on the frontend.
 
-First, run the development server:
+## Screenshots
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Login Page
+![Login Page](./screenshots/login.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Dashboard
+![Dashboard](./screenshots/dashboard.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Users List
+![Users List](./screenshots/users.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Profile Page
+![Profile Page](./screenshots/profile.png)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Components List
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Card :- Reusable container for stats, charts, and content blocks
+* Badge :- Small status labels (Active, Pending, Failed, Admin) with optional dot indicator
+* Button :- Reusable button with variant/color support (primary, outline, danger, etc.)
+* Modal :- Popup dialog with header, body, and footer slots (used for "Add New Item")
+* Input :- Styled form input with label supportSidebarLeft navigation menu (visible only on /dashboard)
+* Navbar :- Top navigation bar with mobile menu toggleAreaChartLine/area chart widget for the dashboard
+* BarChart :- Bar chart widget for the dashboard
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Lessons Learned
 
-## Deploy on Vercel
+During the development of this project, I gained practical experience with several Next.js and React concepts:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Learned how to use the Next.js App Router for creating nested routes and page-based navigation.
+* Understood the importance of the Root Layout and why it must contain the <html> and <body> tags.
+* Built reusable UI components such as Button, Card, Input, Badge, Modal, Sidebar, and Navbar to improve code reusability.
+* Practiced React state management using useState for handling forms, modals, search functionality, and pagination.
+* Implemented client-side search and pagination using mocked data without a backend.
+* Improved my understanding of responsive UI design using Tailwind CSS.
+* Learned to organize the project with a clean folder structure for better maintainability.
+* Gained experience debugging common Next.js issues such as layout configuration and routing errors.
+* Focused on writing simple, readable, and maintainable code that is easy to explain during code reviews.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Structure
+
+```text
+capstone/
+├── app/
+│   ├── components/
+│   │   └── ui/
+│   │       ├── AreaChart.jsx
+│   │       ├── Badge.jsx
+│   │       ├── BarChart.jsx
+│   │       ├── Button.jsx
+│   │       ├── Card.jsx
+│   │       ├── Input.jsx
+│   │       ├── Modal.jsx
+│   │       ├── Navbar.jsx
+│   │       └── Sidebar.jsx
+│   │
+│   ├── dashboard/
+│   │   ├── page.jsx
+│   │   ├── profile/
+│   │   │   └── page.jsx
+│   │   └── users/
+│   │       └── page.jsx
+│   │
+│   ├── lib/
+│   │   └── dummydata.js
+│   │
+│   ├── login/
+│   │   └── page.jsx
+│   │
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.jsx
+│   └── page.jsx
+│
+├── public/
+├── screenshots/
+│   ├── Dashboard.png
+│   ├── login.png
+│   ├── profile.png
+│   └── Users.png
+│
+├── package.json
+├── next.config.ts
+└── README.md
