@@ -8,10 +8,10 @@ A fully responsive multi-page admin dashboard UI built with Next.js 14 (App Rout
 ![Login Page](./screenshots/login.png)
 
 # Dashboard
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](./screenshots/Dashboard.png)
 
 # Users List
-![Users List](./screenshots/users.png)
+![Users List](./screenshots/Users.png)
 
 # Profile Page
 ![Profile Page](./screenshots/profile.png)
