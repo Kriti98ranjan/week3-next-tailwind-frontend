@@ -21,7 +21,7 @@ export default function DashboardPage() {
       {/* Page title */}
       <h1 className="text-xl sm:text-2xl font-bold text-gray-800">Dashboard</h1>
 
-      {/* Stat Cards — responsive: 1 col on mobile, 2 on sm, 4 on lg */}
+      {/* Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 px-0 sm:px-2">
         <Card title="Primary Card" className="bg-blue-600">
           <p className="text-sm sm:text-base">View Details -</p>
@@ -40,7 +40,7 @@ export default function DashboardPage() {
         </Card>
       </div>
 
-      {/* Charts — stack on mobile, side by side on lg */}
+      {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
         <Card title="Area Chart Example" className="bg-white text-black overflow-x-auto">
           <div className="min-w-70">
@@ -55,7 +55,7 @@ export default function DashboardPage() {
         </Card>
       </div>
 
-      {/* Badges + Buttons — stack on mobile */}
+      {/* Badges + Buttons*/}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
         <Card header="Status Badges">
           <div className="flex flex-wrap gap-2">
