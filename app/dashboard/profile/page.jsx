@@ -7,7 +7,7 @@ export default function ProfilePage() {
   const user = mockProfile;
 
   return (
-    <div>
+    <div className="p-4">
       <Link href="/dashboard" className="text-blue-600 text-sm hover:underline">
         ← Go back
       </Link>
@@ -26,15 +26,15 @@ export default function ProfilePage() {
           {/* Basic info */}
           <div>
             <div>
-              <p className="text-xs text-gray-400">Name</p>
+              <p className="text-gray-400">Name</p>
               <p className="font-semibold">{user.name}</p>
             </div>
             <div>
-              <p className="text-xs text-gray-400">Job Title</p>
+              <p className="text-gray-400">Job Title</p>
               <p className="font-semibold">{user.jobTitle}</p>
             </div>
             <div>
-              <p className="text-xs text-gray-400">Email</p>
+              <p className="text-gray-400">Email</p>
               <p className="text-blue-600">{user.email}</p>
             </div>
           </div>
@@ -42,15 +42,15 @@ export default function ProfilePage() {
           {/* Social links */}
           <div>
             <div>
-              <p className="text-xs text-gray-400">LinkedIn</p>
+              <p className="text-gray-400">LinkedIn</p>
               <p className="text-blue-600">{user.linkedin}</p>
             </div>
             <div>
-              <p className="text-xs text-gray-400">Twitter</p>
+              <p className="text-gray-400">Twitter</p>
               <p className="text-blue-600">{user.twitter}</p>
             </div>
             <div>
-              <p className="text-xs text-gray-400">Facebook</p>
+              <p className="text-gray-400">Facebook</p>
               <p className="text-blue-600">{user.facebook}</p>
             </div>
           </div>
@@ -58,13 +58,13 @@ export default function ProfilePage() {
 
         {/* Bio */}
         <div className="mt-6 pt-4 border-t">
-          <p className="text-xs text-gray-400 mb-2">Bio</p>
-          <p className="text-gray-700 text-sm leading-relaxed">{user.bio}</p>
+          <p className="text-gray-400 mb-2">Bio</p>
+          <p className="text-gray-700">{user.bio}</p>
         </div>
 
         <Link
           href="#"
-          className="inline-block mt-4 text-blue-600 text-sm hover:underline"
+          className="block mt-4 text-blue-600 text-sm hover:underline"
         >
           Edit Profile
         </Link>
