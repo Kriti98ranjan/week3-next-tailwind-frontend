@@ -85,12 +85,12 @@ export const dummy = [
 // login user for profile
 export const mockProfile = {
   name: "Abhinav Raj",
-  jobTitle: "Actor",
+  jobTitle: "Student",
   email: "abhinav00@gmail.com",
   linkedin: "abhinav@linkedin.com",
   twitter: "abhinav@twit.com",
   facebook: "abhinav@facebook.com",
   avatar:
     "https://imgs.search.brave.com/fzESSQEtBozKshMAkdu3SGZouPguoXqPc2prSwf_5yc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM2/OTc0NjAzMy9waG90/by9wb3J0cmFpdC1v/Zi1hLWhhbmRzb21l/LXlvdW5nLWJ1c2lu/ZXNzbWFuLXdvcmtp/bmctaW4tb2ZmaWNl/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1jYTFBRmZQZnpP/UHRIWmRBd2E3UXRD/RDFURkR3czdQRzl0/X3JxU2liZEMwPQ",
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet odio augue, in dapibus lacus imperdiet ut. Quisque elementum placerat neque rhoncus tempus. Cras id suscipit diam, sit amet rutrum ipsum. Vestibulum rutrum elit lacinia sapien porta pulvinar.",
+  bio: "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to Letraset, a popular manufacturer of dry transfer sheets for text and other design elements.",
 };
