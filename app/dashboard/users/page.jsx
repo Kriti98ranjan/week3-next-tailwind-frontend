@@ -40,7 +40,7 @@ export default function UsersPage() {
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 p-3">
       <p className="text-sm text-gray-400">Users &gt; List</p>
 
       <h1 className="text-2xl font-bold text-gray-800">
@@ -63,7 +63,7 @@ export default function UsersPage() {
 
         {/* Table */}
 
-        <div className="overflow-x-auto">
+        <div>
           <table className="w-full text-sm text-left min-w-160">
             <thead>
               <tr className="border-b text-gray-500">
