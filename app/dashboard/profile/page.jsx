@@ -12,14 +12,14 @@ export default function ProfilePage() {
         ← Go back
       </Link>
 
-      <Card className="bg-white text-black">
+      <Card className="bg-white text-black ">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Avatar */}
           <div className="flex justify-center lg:justify-start">
             <img
               src={user.avatar}
               alt={user.name}
-              className="w-full max-w-55 h-55 object-cover rounded-md"
+              className="w-full max-w-full h-55 object-cover rounded-md"
             />
           </div>
 
