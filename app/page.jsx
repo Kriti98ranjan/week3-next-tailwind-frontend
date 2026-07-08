@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Home",
   description:
-    "Welcome to Dashboard App — built with Next.js and Tailwind CSS.",
+    "Welcome to Dashboard App — built with Next.js and Tailwind CSS.", 
 };
 
 export default function HomePage() {
@@ -12,7 +12,7 @@ export default function HomePage() {
       {/*navbar */}
 
       <nav className="bg-purple-50 border-b px-4 sm:px-8 py-4 flex justify-between items-center">
-        <span className="font-bold text-gray-800 text-sm sm:text-base">
+        <span className="font-bold  text-gray-800 text-sm sm:text-base">
           Dashboard App
         </span>
         <div className="flex gap-2 sm:gap-4">

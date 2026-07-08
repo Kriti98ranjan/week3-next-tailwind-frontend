@@ -19,7 +19,7 @@ export default function ProfilePage() {
             <img
               src={user.avatar}
               alt={user.name}
-              className="w-full max-w-full h-55 object-cover rounded-md"
+              className="w-full h-55 object-cover rounded-md"
             />
           </div>
 
